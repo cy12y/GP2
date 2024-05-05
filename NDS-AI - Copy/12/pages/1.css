@@ -1,0 +1,55 @@
+/* Add this to your existing <style> tag */
+.main-content {
+    /* Style for main content if needed */
+}
+
+.footer {
+    padding: 1rem 2rem;
+    background: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.footer .links a, .footer .legal-links a {
+    color: #a9a9a9;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.footer .links a:last-child, .footer .legal-links a:last-child {
+    margin-right: 0;
+}
+
+.footer p {
+    color: #a9a9a9;
+    margin: 0 15px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 20px;
+    height: 20px;
+}
+
+.footer .legal-links {
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+}
+
+.footer .legal-links a {
+    font-size: 0.8rem;
+    color: #a9a9a9;
+}
+
+@media (max-width: 768px) {
+    /* Add responsive styles if needed */
+}
