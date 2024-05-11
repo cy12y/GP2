@@ -1,11 +1,10 @@
 #!/bin/bash
 
-# Define variables
 output_file_prefix="network_traffic"
 processed_file="processed_traffic_data.csv"
 result_file="analysis_result.json"
-server_url="http://yourserver.com/upload" # file upload endpoint
-capture_duration=60  # capture duration in seconds
+server_url="http://127.0.0.1/upload" # file upload endpoint
+capture_duration=60 
 
 # Function to process captured data and analyze it using the model
 process_and_analyze() {
@@ -40,12 +39,12 @@ process_and_analyze() {
     mv "$processed_file.tmp" "$processed_file"
 
     # Print the content of the processed file for debugging
-    echo "Content of processed file:"
-    cat "$processed_file"
+    # echo "Content of processed file:"
+    # cat "$processed_file"
 
     # ML model 
     echo "Analyzing traffic..."
-    python npToJson.py "$processed_file" "$result_file"
+    python ModelCall "$processed_file" "$result_file"
 
     # Upload the result to the server if the result file is not empty
     if [ -s "$result_file" ]; then
